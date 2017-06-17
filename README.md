@@ -27,7 +27,7 @@ const log = (val: any) => console.log(JSON.stringify(val));
 
 log(jsonDecodeString(Person)('foo')); // Left ParsingError
 log(jsonDecodeString(Person)('{ "id": 1 }')); // Left ValidationErrors
-log(jsonDecodeString(Person)('{ "id": "foo" }')); // Right { id: 'foo' }
+log(jsonDecodeString(Person)('{ "id": "foo", "age": 5 }')); // Right { id: 'foo', age: 5 }
 
 // Use the reporter for friendly error messages:
 
