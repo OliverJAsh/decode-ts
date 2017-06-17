@@ -1,6 +1,6 @@
 # decode-ts
 
-TypScript compatible value decoding.
+TypeScript compatible value decoding.
 
 - [io-ts] is used to perform IO validation for type safety.
 - [fp-ts] is used for its `Either` type.
