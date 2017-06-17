@@ -1,0 +1,26 @@
+{
+  "name": "decode-ts",
+  "main": "./target/index.js",
+  "typings": "./target/index.d.ts",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json --type-check",
+    "compile": "tsc",
+    "cleanTarget": "rm -rf ./target/*",
+    "prepublish": "yarn cleanTarget && yarn compile && yarn lint"
+  },
+  "files": [
+    "target"
+  ],
+  "dependencies": {
+    "fp-ts": "^0.3.1",
+    "io-ts": "^0.4.0"
+  },
+  "devDependencies": {
+    "io-ts-reporters": "0.0.12",
+    "tslint": "5.4.3",
+    "tslint-language-service": "0.9.6",
+    "typescript": "rc",
+    "typescript-string-enums": "0.3.4"
+  }
+}
