@@ -13,14 +13,14 @@
     "target"
   ],
   "dependencies": {
-    "fp-ts": "^0.3.1",
-    "io-ts": "^0.4.0",
-    "io-ts-reporters": "0.0.12"
+    "fp-ts": "0.4.0",
+    "io-ts": "0.6.0",
+    "io-ts-reporters": "0.0.14"
   },
   "devDependencies": {
     "tslint": "5.4.3",
     "tslint-language-service": "0.9.6",
-    "typescript": "rc",
+    "typescript": "2.4.1",
     "typescript-string-enums": "0.3.4"
   }
 }
