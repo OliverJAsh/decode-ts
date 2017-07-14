@@ -20,7 +20,6 @@
   "devDependencies": {
     "tslint": "5.5.0",
     "tslint-language-service": "0.9.6",
-    "typescript": "2.4.1",
-    "typescript-string-enums": "0.3.4"
+    "typescript": "2.4.1"
   }
 }

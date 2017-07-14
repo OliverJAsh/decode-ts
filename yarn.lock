@@ -191,10 +191,6 @@ tsutils@^2.5.1:
   dependencies:
     tslib "^1.7.1"
 
-typescript-string-enums@0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/typescript-string-enums/-/typescript-string-enums-0.3.4.tgz#fb2fde9f891adcc15344e1615e61a4d1a6d6e693"
-
 typescript@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.1.tgz#c3ccb16ddaa0b2314de031e7e6fee89e5ba346bc"

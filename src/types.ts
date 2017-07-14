@@ -1,14 +1,9 @@
 import * as t from 'io-ts';
-import { Enum } from 'typescript-string-enums';
 
-// export enum ErrorTypes {
-//     'ValidationErrors' = 'ValidationErrors',
-//     'ParsingError' = 'ParsingError',
-// }
-export const ErrorTypes = Enum(
-    'ValidationErrors',
-    'ParsingError',
-);
+export enum ErrorTypes {
+    'ValidationErrors' = 'ValidationErrors',
+    'ParsingError' = 'ParsingError',
+}
 
 export class ValidationErrorsError {
     // Literal type annotation required due to bug whereby literal types are
