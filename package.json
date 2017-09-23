@@ -13,9 +13,9 @@
     "target"
   ],
   "dependencies": {
-    "fp-ts": "^0.4.0",
-    "io-ts": "^0.6.0",
-    "io-ts-reporters": "0.0.15"
+    "fp-ts": "^0.5.2",
+    "io-ts": "^0.7.0",
+    "io-ts-reporters": "^0.0.16"
   },
   "devDependencies": {
     "tslint": "5.5.0",
