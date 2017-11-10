@@ -18,7 +18,7 @@
     "io-ts-reporters": "^0.0.17"
   },
   "devDependencies": {
-    "tslint": "5.5.0",
+    "tslint": "^5.8.0",
     "tslint-language-service": "0.9.6",
     "typescript": "^2.6.1"
   }
