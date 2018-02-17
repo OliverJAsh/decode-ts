@@ -19,7 +19,7 @@ export type validateType = (
     <A>(type: t.Type<A>) => (value: {}) => Either<ValidationErrorsError, A>
 );
 export const validateType: validateType = type => value => (
-    t.validate(value, type)
+    type.decode(value)
         .mapLeft(validationErrors => new ValidationErrorsError(validationErrors))
 );
 
