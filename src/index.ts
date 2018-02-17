@@ -16,7 +16,7 @@ const jsonParse: jsonParse = jsonString => (
 );
 
 export type validateType = (
-    <A>(type: t.Type<A>) => (value: {}) => Either<ValidationErrorsError, A>
+    <A, O>(type: t.Type<A, O>) => (value: {}) => Either<ValidationErrorsError, A>
 );
 export const validateType: validateType = type => value => (
     type.decode(value)
@@ -24,7 +24,7 @@ export const validateType: validateType = type => value => (
 );
 
 export type jsonDecodeString = (
-    <A>(type: t.Type<A>) => (value: string) => Either<JsonDecodeError, A>
+    <A, O>(type: t.Type<A, O>) => (value: string) => Either<JsonDecodeError, A>
 );
 export const jsonDecodeString: jsonDecodeString = type => value => (
     // Widen Left generic
