@@ -3,24 +3,24 @@ import * as either from 'fp-ts/lib/Either';
 import * as t from 'io-ts';
 import { formatValidationError } from 'io-ts-reporters';
 
-import { ErrorTypes, JsonDecodeError, ParsingErrorError, ValidationErrorsError } from './types';
+import { JsonDecodeError } from './types';
 
 export type Either<L, A> = either.Either<L, A>;
 
 const typecheck = <A>(a: A) => a;
 
-type jsonParse = (jsonString: string) => Either<ParsingErrorError, {}>;
+type jsonParse = (jsonString: string) => Either<JsonDecodeError, {}>;
 const jsonParse: jsonParse = jsonString => (
     either.tryCatch(() => JSON.parse(jsonString))
-        .mapLeft(error => new ParsingErrorError(jsonString, error.message))
+        .mapLeft(error => JsonDecodeError.ParsingError({ input: jsonString, errorMessage: error.message }))
 );
 
 export type validateType = (
-    <A, O>(type: t.Type<A, O>) => (value: {}) => Either<ValidationErrorsError, A>
+    <A, O>(type: t.Type<A, O>) => (value: {}) => Either<JsonDecodeError, A>
 );
 export const validateType: validateType = type => value => (
     type.decode(value)
-        .mapLeft(validationErrors => new ValidationErrorsError(validationErrors))
+        .mapLeft(validationErrors => JsonDecodeError.ValidationErrors({ validationErrors }))
 );
 
 export type jsonDecodeString = (
@@ -32,7 +32,7 @@ export const jsonDecodeString: jsonDecodeString = type => value => (
 );
 
 export const formatJsonDecodeError = (error: JsonDecodeError): string[] => {
-    if (error.type === ErrorTypes.ValidationErrors) {
+    if (JsonDecodeError.is.ValidationErrors(error)) {
         return array.catOptions(error.validationErrors.map(formatValidationError));
     } else {
         return [error.errorMessage];

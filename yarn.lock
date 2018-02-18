@@ -224,6 +224,10 @@ typescript@^2.7.2:
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.7.2.tgz#2d615a1ef4aee4f574425cdff7026edf81919836"
 
+unionize@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/unionize/-/unionize-1.0.0.tgz#ed2cc4230b458366bb17bb72cd06c5c328e08d0a"
+
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
