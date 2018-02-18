@@ -17,9 +17,12 @@
         "no-unused-variable": [true, "check-parameters"],
 
         "strict-boolean-expressions": true,
-        "ordered-imports": [true, {
-            "grouped-imports": true
-        }],
+        "ordered-imports": [
+            true,
+            {
+                "grouped-imports": true
+            }
+        ],
         "no-inferrable-types": [true, "ignore-properties"],
         "no-switch-case-fall-through": true,
         "arrow-return-shorthand": [true, "multiline"],
@@ -38,7 +41,6 @@
         "radix": true,
         "restrict-plus-operands": true,
         "triple-equals": true,
-        "typeof-compare": true,
         "use-default-type-parameter": true,
         "use-isnan": true,
         "deprecation": true,
@@ -55,7 +57,7 @@
         "object-literal-shorthand": true,
         "prefer-switch": true,
         "prefer-template": true,
-        "quotemark": [true, "single"],
+        "quotemark": [true, "single", "avoid-escape"],
         "variable-name": [
             true,
             "ban-keywords",
@@ -67,6 +69,7 @@
         ],
         "no-import-side-effect": true,
         "no-duplicate-imports": true,
-        "no-implicit-dependencies": [true, "dev"]
+        "no-implicit-dependencies": [true, "dev"],
+        "array-type": [true, "array-simple"]
     }
 }
