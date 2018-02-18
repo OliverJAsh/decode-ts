@@ -5,6 +5,8 @@ TypeScript compatible value decoding.
 - [io-ts] is used to perform IO validation for type safety.
 - [fp-ts] is used for its `Either` type.
 
+This is mostly a wrapper around the terrific [io-ts] to add a call to `JSON.parse`. You could achieve something similar with an io-ts type, however [there is no way to propoagate the JSON parsing errors](https://github.com/gcanti/io-ts/issues/46#issuecomment-305506173), hence the need for the wrapper.
+
 ## Installation
 
 ``` bash
