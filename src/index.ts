@@ -42,3 +42,5 @@ export const formatJsonDecodeError = (error: JsonDecodeError): string[] => {
 export const reportJsonDecodeError = (result: either.Either<JsonDecodeError, {}>): string[] => (
     result.fold(formatJsonDecodeError, () => [])
 );
+
+export * from './types';
