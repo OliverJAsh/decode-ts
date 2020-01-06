@@ -21,6 +21,6 @@
   "devDependencies": {
     "tslint": "^5.8.0",
     "tslint-language-service": "0.9.6",
-    "typescript": "^2.7.2"
+    "typescript": "^3.7.4"
   }
 }
