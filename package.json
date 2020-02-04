@@ -2,7 +2,7 @@
   "name": "decode-ts",
   "main": "./target/index.js",
   "typings": "./target/index.d.ts",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "scripts": {
     "lint": "tslint --project tsconfig.json",
     "compile": "tsc",
